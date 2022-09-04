@@ -1,8 +1,6 @@
 from rest_framework import serializers
 from .models import (   Course, 
                         Theme, 
-                        CourseTheme, 
-                        CourseTeacher, 
                         CourseStudent, 
                         Purchase,
                     )
@@ -18,18 +16,6 @@ class CourseSerializer(serializers.ModelSerializer):
 class ThemeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Theme
-        fields = "__all__"
-
-
-class CourseThemeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CourseTheme
-        fields = "__all__"
-
-
-class CourseTeacherSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CourseTeacher
         fields = "__all__"
 
 
